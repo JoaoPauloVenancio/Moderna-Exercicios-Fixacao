@@ -1,36 +1,18 @@
 package AulaFinal;
 
 public final class ProdutoComDesconto extends Produto implements CalculoProdutoComDesconto {
-    private boolean pagamentoComCartao;
-
 
     @Override
     public double calcularDesconto(boolean valor) {
-        this.pagamentoComCartao = valor;
-        if (this.pagamentoComCartao == false) {
-            this.desconto = this.valor * 0.5;
-            this.valor -= this.desconto;
+        this.valorTotalDoProduto = this.valor * this.quantidade;
+        if (!valor) {
+            this.desconto = this.valorTotalDoProduto * 0.5;
+            this.valorTotalDoProduto -= this.desconto;
             return this.valor;
         }
-        this.desconto = this.valor * 0.6;
-        this.valor -= this.desconto;
+        this.desconto = this.valorTotalDoProduto * 0.6;
+        this.valorTotalDoProduto -= this.desconto;
         return this.valor;
-    }
-
-    public boolean isPagamentoComCartao() {
-        return pagamentoComCartao;
-    }
-
-    public void setPagamentoComCartao(boolean pagamentoComCartao) {
-        this.pagamentoComCartao = pagamentoComCartao;
-    }
-
-    public double getDesconto() {
-        return desconto;
-    }
-
-    public void setDesconto(double desconto) {
-        this.desconto = desconto;
     }
 }
 

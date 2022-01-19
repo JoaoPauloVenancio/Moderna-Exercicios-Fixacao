@@ -5,6 +5,7 @@ public abstract class Produto {
     protected double valor;
     protected long quantidade;
     protected double desconto;
+    protected double valorTotalDoProduto;
 
     public Produto(String nome, double valor, long quantidade) {
         this.nome = nome;
@@ -17,10 +18,10 @@ public abstract class Produto {
 
     @Override
     public String toString() {
-        return "AulaFinal.Produto{" +
+        return "Produto{" +
                 "nome='" + nome + '\'' +
-                ", valor=" + valor +
                 ", quantidade=" + quantidade +
+                ", valorTotalDoProduto=" + valorTotalDoProduto +
                 '}';
     }
 
@@ -54,5 +55,13 @@ public abstract class Produto {
 
     public void setDesconto(double desconto) {
         this.desconto = desconto;
+    }
+
+    public double getValorTotalDoProduto() {
+        return valorTotalDoProduto;
+    }
+
+    public void setValorTotalDoProduto(double valorTotalDoProduto) {
+        this.valorTotalDoProduto = valorTotalDoProduto;
     }
 }
