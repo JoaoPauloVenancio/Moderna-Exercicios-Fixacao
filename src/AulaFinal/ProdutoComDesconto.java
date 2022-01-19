@@ -1,3 +1,5 @@
+package AulaFinal;
+
 public final class ProdutoComDesconto extends Produto implements CalculoProdutoComDesconto {
     private boolean pagamentoComCartao;
     private static double descontoAdicional = 0.1;

@@ -1,3 +1,5 @@
+package AulaFinal;
+
 public abstract class Produto {
     protected String nome;
     protected double valor;
@@ -15,7 +17,7 @@ public abstract class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" +
+        return "AulaFinal.Produto{" +
                 "nome='" + nome + '\'' +
                 ", valor=" + valor +
                 ", quantidade=" + quantidade +
