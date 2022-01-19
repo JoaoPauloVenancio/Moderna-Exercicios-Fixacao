@@ -2,7 +2,7 @@ package AulaFinal;
 
 public final class ProdutoComDesconto extends Produto implements CalculoProdutoComDesconto {
     private boolean pagamentoComCartao;
-    private static double descontoAdicional = 0.1;
+
 
     @Override
     public double calcularDesconto(boolean valor) {
@@ -12,7 +12,7 @@ public final class ProdutoComDesconto extends Produto implements CalculoProdutoC
             this.valor -= this.desconto;
             return this.valor;
         }
-        this.desconto = this.valor * this.descontoAdicional;
+        this.desconto = this.valor * 0.6;
         this.valor -= this.desconto;
         return this.valor;
     }
